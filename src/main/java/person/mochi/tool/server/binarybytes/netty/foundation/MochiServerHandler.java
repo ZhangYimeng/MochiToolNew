@@ -1,10 +1,12 @@
-package person.mochi.tool.server.binarybytes.foundation;
+package person.mochi.tool.server.binarybytes.netty.foundation;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.ReferenceCountUtil;
+import io.netty.channel.ChannelHandler.Sharable;
 
+@Sharable
 public class MochiServerHandler extends ChannelInboundHandlerAdapter {
 
 	private static BytesHandler bytesHandler;

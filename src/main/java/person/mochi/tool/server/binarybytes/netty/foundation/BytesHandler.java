@@ -1,4 +1,4 @@
-package person.mochi.tool.server.binarybytes.foundation;
+package person.mochi.tool.server.binarybytes.netty.foundation;
 
 import io.netty.buffer.ByteBuf;
 

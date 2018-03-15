@@ -1,4 +1,4 @@
-package person.mochi.tool.server.binarybytes;
+package person.mochi.tool.server.binarybytes.netty;
 
 import java.security.cert.CertificateException;
 
@@ -10,8 +10,8 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.handler.ssl.SslContext;
 import io.netty.handler.ssl.SslContextBuilder;
 import io.netty.handler.ssl.util.SelfSignedCertificate;
-import person.mochi.tool.server.binarybytes.foundation.BytesHandler;
-import person.mochi.tool.server.binarybytes.foundation.ServerExecutor;
+import person.mochi.tool.server.binarybytes.netty.foundation.BytesHandler;
+import person.mochi.tool.server.binarybytes.netty.foundation.ServerExecutor;
 
 public class MochiServer {
 
