@@ -3,6 +3,9 @@ package person.mochi.tool.server.binarybytes.socket.foundation;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import person.mochi.tool.data.bytescombinetool.BytesCombineTool;
+import person.mochi.tool.data.interconversion.DataInterconversionTool;
+
 public class PassiveResponseExcutor {
 
 	private OutputStream output;
@@ -12,7 +15,7 @@ public class PassiveResponseExcutor {
 	}
 	
 	public void passiveeply(byte[] response) throws IOException {
-		output.write(response);
+		output.write(BytesCombineTool.append(DataInterconversionTool.intToBytes(response.length), response));
 		output.flush();
 	}
 	

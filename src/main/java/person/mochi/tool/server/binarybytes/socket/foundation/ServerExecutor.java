@@ -9,8 +9,9 @@ public class ServerExecutor extends Thread {
 	private BytesHandler bytesHandler;
 	private ServerSocket server;
 
-	public ServerExecutor(ServerSocket server) {
+	public ServerExecutor(ServerSocket server, BytesHandler bytesHandler) {
 		this.server = server;
+		this.bytesHandler = bytesHandler;
 	}
 
 	@Override
@@ -19,7 +20,7 @@ public class ServerExecutor extends Thread {
 			try {
 				Socket socket = server.accept();
 				RequestExecutor reqExecutor = new RequestExecutor(socket, bytesHandler);
-				new Thread(reqExecutor).start();
+				reqExecutor.start();
 			} catch (IOException e) {
 				System.err.println("连接创建失败!");
 				e.printStackTrace();
