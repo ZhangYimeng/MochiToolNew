@@ -9,7 +9,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import person.mochi.tool.maps.CountMap;
+import person.mochi.tool.graph.CountMap;
 
 public class TextSimilarity {
 

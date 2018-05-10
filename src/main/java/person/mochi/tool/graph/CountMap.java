@@ -1,4 +1,4 @@
-package person.mochi.tool.maps;
+package person.mochi.tool.graph;
 
 import java.util.HashMap;
 import java.util.Map.Entry;
@@ -13,6 +13,14 @@ public class CountMap<T> {
 		countMap = new HashMap<T, AtomicInteger>();
 	}
 
+	public void put(T object, int time) {
+		if (countMap.containsKey(object)) {
+			countMap.get(object).addAndGet(time);
+		} else {
+			countMap.put(object, new AtomicInteger(time));
+		}
+	}
+	
 	public void put(T object) {
 		if (countMap.containsKey(object)) {
 			countMap.get(object).incrementAndGet();

@@ -1,4 +1,4 @@
-package person.mochi.tool.maps;
+package person.mochi.tool.graph;
 
 import java.util.ArrayList;
 import java.util.HashMap;
