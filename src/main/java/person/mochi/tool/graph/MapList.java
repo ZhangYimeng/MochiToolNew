@@ -6,6 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 
 public class MapList<K, T> {
 
@@ -60,6 +61,10 @@ public class MapList<K, T> {
 	 */
 	public List<T> getSubList(K index) {
 		return classifierBag.get(index);
+	}
+	
+	public Set<Entry<K, List<T>>> getEntrySet() {
+		return classifierBag.entrySet();
 	}
 
 }
