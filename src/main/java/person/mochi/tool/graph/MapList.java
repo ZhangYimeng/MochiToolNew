@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
+import java.util.Map.Entry;
 
 public class MapList<K, T> {
 
@@ -65,6 +65,10 @@ public class MapList<K, T> {
 	
 	public Set<Entry<K, List<T>>> getEntrySet() {
 		return classifierBag.entrySet();
+	}
+	
+	public String toString() {
+		return classifierBag.toString();
 	}
 
 }

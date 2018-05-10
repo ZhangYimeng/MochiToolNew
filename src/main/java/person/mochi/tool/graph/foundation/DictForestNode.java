@@ -17,8 +17,8 @@ public class DictForestNode<K> {
 		nodes = new HashMap<K, DictForestNode<K>>();
 	}
 	
-	public void addSubNode(K key, DictForestNode<K> node) {
-		nodes.put(key, node);
+	public void addSubNode(DictForestNode<K> node) {
+		nodes.put(node.getThisNodeKey(), node);
 	}
 	
 	public DictForestNode<K> getSubNode(K key) {
