@@ -47,7 +47,7 @@ public class ScreenGrabber {
 
 	public static void main(String[] args) throws IOException {
 		// 保存路径
-		File screenFile = new File("/Users/zhangyimeng/Desktop/pic");
+		File screenFile = new File("C:\\");
 		if (!screenFile.exists()) {
 			screenFile.mkdir();
 		}
