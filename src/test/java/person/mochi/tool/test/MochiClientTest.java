@@ -8,7 +8,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import person.mochi.tool.client.binarybytes.netty.MochiClient;
 import person.mochi.tool.client.binarybytes.netty.foundation.MochiClientSender;
-import person.mochi.tool.data.bytescombinetool.BytesCombineTool;
+import person.mochi.tool.data.arraycombinetool.BytesCombineTool;
 import person.mochi.tool.data.interconversion.DataInterconversionTool;
 import person.mochi.tool.server.binarybytes.netty.foundation.BytesHandler;
 
