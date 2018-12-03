@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e68c965b-8c4d-4066-9055-3aaaaac8f819" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_22_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MochiToolNew.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/person/mochi/tool/data/arraycombinetool/BytesCombineTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/person/mochi/tool/data/arraycombinetool/IntegerCombineTool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/person/mochi/tool/client/binarybytes/socket/foundation/MochiClientSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/person/mochi/tool/client/binarybytes/socket/foundation/MochiClientSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/person/mochi/tool/data/bytescombinetool/BytesCombineTool.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/person/mochi/tool/server/binarybytes/socket/foundation/PassiveResponseExcutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/person/mochi/tool/server/binarybytes/socket/foundation/PassiveResponseExcutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/person/mochi/tool/test/MochiClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/person/mochi/tool/test/MochiClientTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/person/mochi/tool/test/MochiClientTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/person/mochi/tool/test/MochiClientTest2.java" afterDir="false" />
-    </list>
+    <list default="true" id="e68c965b-8c4d-4066-9055-3aaaaac8f819" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +13,7 @@
     <session id="2088636616">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.opened" value="2" />
@@ -195,7 +179,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541990654616" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542004620674" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -223,16 +207,15 @@
       <option name="presentableId" value="Default" />
       <updated>1541989687170</updated>
       <workItem from="1541989690976" duration="897000" />
-      <workItem from="1541990624443" duration="25000" />
+      <workItem from="1541990624443" duration="601000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="922000" />
+    <option name="totallyTimeSpent" value="1498000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
