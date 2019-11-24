@@ -2,12 +2,14 @@ package person.mochi.tool.calendar;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class MochiCalendar {
 
 	private long rawTimeStamp = 0;
 	private String formatTimeStamp = new String();
-	private SimpleDateFormat defaultSDF = new SimpleDateFormat("yyyy/M/d/h/m/s");
+	private SimpleDateFormat defaultSDF = new SimpleDateFormat("HH:mm:ss");
+	private Calendar calendar = defaultSDF.getCalendar();
 	
 	public MochiCalendar() {
 		rawTimeStamp = System.currentTimeMillis();
@@ -39,5 +41,10 @@ public class MochiCalendar {
 	public String getFormatDate() {
 		return defaultSDF.format(rawTimeStamp);
 	}
-	
+
+	public int getHour() {
+		SimpleDateFormat defaultSDF = new SimpleDateFormat("HH");
+		return Integer.parseInt(defaultSDF.format(rawTimeStamp));
+	}
+
 }
