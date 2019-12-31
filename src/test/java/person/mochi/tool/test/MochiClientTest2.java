@@ -14,31 +14,31 @@ import person.mochi.tool.server.binarybytes.netty.foundation.BytesHandler;
 
 public class MochiClientTest2 {
 
-	public static void main(String[] args) throws CertificateException, SSLException, InterruptedException {
-		BytesHandler handler = new ClientHandler();
-		MochiClient mc = new MochiClient("127.0.0.1", 8080, handler);
-		mc.initial();
-		MochiClientSender mcs = mc.getSender();
-		byte[] frameLengthBytes = new byte[4];
-		byte[] bodyBytes = DataInterconversionTool.stringToBytes("你坏！");
-		frameLengthBytes = DataInterconversionTool.intToBytes(frameLengthBytes.length + bodyBytes.length);
-		ByteBuf msg = Unpooled.directBuffer();
-		msg.writeBytes(BytesCombineTool.append(frameLengthBytes, bodyBytes));
-		mcs.send(msg);
-		Thread.sleep(2000);
-		msg = Unpooled.directBuffer();
-		msg.writeBytes(BytesCombineTool.append(frameLengthBytes, bodyBytes));
-		mcs.send(msg);
-		while(true) {
-			Thread.sleep(100);
-			msg = Unpooled.directBuffer();
-			msg.writeBytes(BytesCombineTool.append(frameLengthBytes, bodyBytes));
-			mcs.send(msg);
-		}
+    public static void main(String[] args) throws CertificateException, SSLException, InterruptedException {
+        BytesHandler handler = new ClientHandler();
+        MochiClient mc = new MochiClient("127.0.0.1", 8080, handler);
+        mc.initial();
+        MochiClientSender mcs = mc.getSender();
+        byte[] frameLengthBytes = new byte[4];
+        byte[] bodyBytes = DataInterconversionTool.stringToBytes("你坏！");
+        frameLengthBytes = DataInterconversionTool.intToBytes(frameLengthBytes.length + bodyBytes.length);
+        ByteBuf msg = Unpooled.directBuffer();
+        msg.writeBytes(BytesCombineTool.append(frameLengthBytes, bodyBytes));
+        mcs.send(msg);
+        Thread.sleep(2000);
+        msg = Unpooled.directBuffer();
+        msg.writeBytes(BytesCombineTool.append(frameLengthBytes, bodyBytes));
+        mcs.send(msg);
+        while (true) {
+            Thread.sleep(100);
+            msg = Unpooled.directBuffer();
+            msg.writeBytes(BytesCombineTool.append(frameLengthBytes, bodyBytes));
+            mcs.send(msg);
+        }
 //		System.out.println("sended");
 //		mcs.shutdown();
 //		mc.clientClose();
 //		System.out.println("done");
-	}
+    }
 
 }

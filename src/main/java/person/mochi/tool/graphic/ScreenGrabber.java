@@ -15,48 +15,45 @@ import person.mochi.tool.graphic.screengrabber.foundation.Anchor;
 
 public class ScreenGrabber {
 
-	private Robot robot;
+    private Robot robot;
 
-	public ScreenGrabber() {
-		try {
-			robot = new Robot();
-		} catch (AWTException e) {
-			e.printStackTrace();
-		}
-	}
+    public ScreenGrabber() {
+        try {
+            robot = new Robot();
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
+    }
 
-	/**
-	 * the function to grabbe pic.
-	 * 
-	 * @param anchor
-	 *            the start point of the pic you wanna grabbe.
-	 * @param width
-	 *            the width of the pic.
-	 * @param height
-	 *            the height of the pic.
-	 */
-	public BufferedImage grabbe(Anchor anchor, int width, int height) {
-		Dimension temp = Toolkit.getDefaultToolkit().getScreenSize();
-		int fullWidth = (int) temp.getWidth();
-		int fullHeight = (int) temp.getHeight();
-		anchor.initialize(fullWidth, fullHeight, width, height);
-		Rectangle screenRectangle = new Rectangle();
-		screenRectangle.setBounds(anchor.getX(), anchor.getY(), width, height);
-		return robot.createScreenCapture(screenRectangle);
-	}
+    /**
+     * the function to grabbe pic.
+     *
+     * @param anchor the start point of the pic you wanna grabbe.
+     * @param width  the width of the pic.
+     * @param height the height of the pic.
+     */
+    public BufferedImage grabbe(Anchor anchor, int width, int height) {
+        Dimension temp = Toolkit.getDefaultToolkit().getScreenSize();
+        int fullWidth = (int) temp.getWidth();
+        int fullHeight = (int) temp.getHeight();
+        anchor.initialize(fullWidth, fullHeight, width, height);
+        Rectangle screenRectangle = new Rectangle();
+        screenRectangle.setBounds(anchor.getX(), anchor.getY(), width, height);
+        return robot.createScreenCapture(screenRectangle);
+    }
 
-	public static void main(String[] args) throws IOException {
-		// 保存路径
-		File screenFile = new File("C:\\");
-		if (!screenFile.exists()) {
-			screenFile.mkdir();
-		}
-		while(true) {
-			ScreenGrabber sg = new ScreenGrabber();
-			BufferedImage image = sg.grabbe(Anchor.CENTER, 100, 100);
-			File f = new File(screenFile, System.currentTimeMillis() + ".png");
-			ImageIO.write(image, "png", f);
-		}
+    public static void main(String[] args) throws IOException {
+        // 保存路径
+        File screenFile = new File("C:\\");
+        if (!screenFile.exists()) {
+            screenFile.mkdir();
+        }
+        while (true) {
+            ScreenGrabber sg = new ScreenGrabber();
+            BufferedImage image = sg.grabbe(Anchor.CENTER, 100, 100);
+            File f = new File(screenFile, System.currentTimeMillis() + ".png");
+            ImageIO.write(image, "png", f);
+        }
 //		File f = new File(screenFile, "111.png");
 //		ImageIO.write(image, "png", f);
 //		System.out.println(image.getData().getDataBuffer().getDataType());
@@ -86,6 +83,6 @@ public class ScreenGrabber {
 //		// 自动打开
 //		if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.OPEN))
 //			Desktop.getDesktop().open(f);
-	}
+    }
 
 }

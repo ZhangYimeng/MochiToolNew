@@ -5,10 +5,10 @@ import person.mochi.tool.server.binarybytes.socket.foundation.BytesHandler;
 
 public class SocketServerHandler implements BytesHandler {
 
-	@Override
-	public byte[] handle(byte[] request) {
-		System.out.println(DataInterconversionTool.bytesToString(request));
-		return request;
-	}
+    @Override
+    public byte[] handle(byte[] request) {
+        System.out.println(DataInterconversionTool.bytesToString(request));
+        return request;
+    }
 
 }

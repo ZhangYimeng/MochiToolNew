@@ -7,27 +7,27 @@ import person.mochi.tool.server.binarybytes.netty.foundation.BytesHandler;
 
 public class MochiClientHandler extends ChannelInboundHandlerAdapter {
 
-	private BytesHandler bytesHandler;
-	
-	public MochiClientHandler(BytesHandler bytesHandler) {
-		this.bytesHandler = bytesHandler;
-	}
-	
-	@Override
-	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-		ByteBuf in = (ByteBuf) msg;
-		bytesHandler.handle(in);
-	}
-	
-	@Override
-	public void channelReadComplete(ChannelHandlerContext ctx) {
-		ctx.flush();
-	}
+    private BytesHandler bytesHandler;
 
-	@Override
-	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-		cause.printStackTrace();
-		ctx.close();
-	}
-	
+    public MochiClientHandler(BytesHandler bytesHandler) {
+        this.bytesHandler = bytesHandler;
+    }
+
+    @Override
+    public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        ByteBuf in = (ByteBuf) msg;
+        bytesHandler.handle(in);
+    }
+
+    @Override
+    public void channelReadComplete(ChannelHandlerContext ctx) {
+        ctx.flush();
+    }
+
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
+        cause.printStackTrace();
+        ctx.close();
+    }
+
 }

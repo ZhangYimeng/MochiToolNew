@@ -21,7 +21,7 @@ public class ForEach {
 
     public ForEach(int column, int row, int worker) {
         this.column = column;
-        this.row= row;
+        this.row = row;
         this.worker = worker;
         totalCount = row * column;
         index = new AtomicLong(0);

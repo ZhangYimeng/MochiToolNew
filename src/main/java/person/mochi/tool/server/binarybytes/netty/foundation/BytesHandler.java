@@ -4,6 +4,6 @@ import io.netty.buffer.ByteBuf;
 
 public interface BytesHandler {
 
-	public ByteBuf handle(ByteBuf input);
+    public ByteBuf handle(ByteBuf input);
 
 }

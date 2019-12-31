@@ -5,9 +5,9 @@ import person.mochi.tool.data.interconversion.DataInterconversionTool;
 
 public class SocketClientHandler implements BytesHandler {
 
-	@Override
-	public void handle(byte[] request) {
-		System.out.println(DataInterconversionTool.bytesToString(request));
-	}
+    @Override
+    public void handle(byte[] request) {
+        System.out.println(DataInterconversionTool.bytesToString(request));
+    }
 
 }
